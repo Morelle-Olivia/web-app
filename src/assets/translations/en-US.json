@@ -22,6 +22,12 @@
     "Amount": "Amount Collected",
     "Office": "Office",
     "Data": "No Data"
+  },
+
+  "AmountDisbursedPie": {
+    "Amount": "Amount Disbursed",
+    "Office": "Office",
+    "Data": "No Data"
   }
 }
 
