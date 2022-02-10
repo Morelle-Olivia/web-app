@@ -23,11 +23,17 @@
     "Office": "Office",
     "Data": "No Data"
   },
-
   "AmountDisbursedPie": {
     "Amount": "Amount Disbursed",
     "Office": "Office",
     "Data": "No Data"
+  },
+  "ClientTrendsBar": {
+    "Client": "Client Trends",
+    "Office": "Office",
+    "Day": "Day",
+    "Week": "Week",
+    "Month": "Month"
   }
 }
 
