@@ -34,6 +34,10 @@
     "Day": "Jour",
     "Week": "Semaine",
     "Month": "Mois"
+  },
+  "Dashboard": {
+    "Recent": "Activités récentes",
+    "Frequent": "Activités fréquentes"
   }
 
 }
