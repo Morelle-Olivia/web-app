@@ -38,6 +38,11 @@
   "Dashboard": {
     "Recent": "Recent Activities",
     "Frequent": "Frequent Activities"
+  },
+  "Home": {
+    "Dashboard": "Dashboard",
+    "Welcome": "Welcome",
+    "Activity": "Search Activity"
   }
 }
 

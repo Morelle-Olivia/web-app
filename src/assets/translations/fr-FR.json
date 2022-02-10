@@ -38,6 +38,11 @@
   "Dashboard": {
     "Recent": "Activités récentes",
     "Frequent": "Activités fréquentes"
+  },
+  "Home": {
+    "Dashboard": "Tableau de bord",
+    "Welcome": "Bienvenu",
+    "Activity": "Activité de recherche"
   }
 
 }
