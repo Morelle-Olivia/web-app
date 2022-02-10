@@ -43,6 +43,43 @@
     "Dashboard": "Tableau de bord",
     "Welcome": "Bienvenu",
     "Activity": "Activité de recherche"
+  },
+  "CreateLoansAccount": {
+    "Details": "DÉTAILS",
+    "Terms": "TERMES",
+    "Charge": "CHARGES",
+    "Preview": "APERÇU"
+  },
+  "LoanAccountLoad": {
+    "Load": "Charger le document de prêt",
+    "Name1": "Nom de fichier",
+    "Name2": "Le nom de fichier est",
+    "Required": "Obligatoire",
+    "Desc": "Description",
+    "Cancel": "Annuler",
+    "Confirm": "Confirmer"
+  },
+  "LoansAccountAdd": {
+    "Loan": "Ajouter une garantie de prêt",
+    "Type1": "Type de garantie",
+    "Type2": "Type de garantie est",
+    "Required": "Obligatoire",
+    "Value": "Valeur",
+    "Value1": "Valeur est",
+    "Desc": "Description",
+    "Desc1": "Description est",
+    "Cancel": "Annuler"
+  },
+  "LoansAccountView": {
+    "Detail": "Détail du garant",
+    "FirstN": "Prénom",
+    "LastN": "Nom de famille",
+    "Relationship": "Relations",
+    "Type": "Type de garant",
+    "Status": "Status",
+    "Active": "Active",
+    "Delete": "Supprimé",
+    "Cancel": "Annuler"
   }
 
 }

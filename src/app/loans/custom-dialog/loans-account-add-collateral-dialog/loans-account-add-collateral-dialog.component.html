@@ -1,39 +1,39 @@
-<h1 mat-dialog-title>Add Loan Collateral</h1>
+<h1 mat-dialog-title>{{'LoansAccountAdd.Loan'| translate}}</h1>
 
 <div mat-dialog-content [formGroup]="addCollateralForm" fxLayout="column">
 
   <mat-form-field>
-    <mat-label>Collateral Type</mat-label>
+    <mat-label>{{'LoansAccountAdd.Type1'| translate}}</mat-label>
     <mat-select formControlName="type" required>
       <mat-option *ngFor="let collateralType of collateralTypeData" [value]="collateralType.id">
         {{ collateralType.name }}
       </mat-option>
     </mat-select>
     <mat-error>
-      Collateral Type is <strong>required</strong>
+      {{'LoansAccountAdd.Type2'| translate}} <strong>{{'LoansAccountAdd.Required'| translate}}</strong>
     </mat-error>
   </mat-form-field>
 
   <mat-form-field>
-    <mat-label>Value</mat-label>
+    <mat-label>{{'LoansAccountAdd.Value'| translate}}</mat-label>
     <input type="number" matInput formControlName="value" required>
     <mat-error>
-      Value is <strong>required</strong>
+      {{'LoansAccountAdd.Value1'| translate}} <strong>{{'LoansAccountAdd.Required'| translate}}</strong>
     </mat-error>
   </mat-form-field>
 
   <mat-form-field>
-    <mat-label>Description</mat-label>
+    <mat-label>{{'LoansAccountAdd.Desc'| translate}}</mat-label>
     <input type="text" matInput formControlName="description" required>
     <mat-error>
-      Description is <strong>required</strong>
+      {{'LoansAccountAdd.Desc1'| translate}}<strong>{{'LoansAccountAdd.Required'| translate}}</strong>
     </mat-error>
   </mat-form-field>
 
 </div>
 
 <mat-dialog-actions fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="2%">
-  <button mat-raised-button mat-dialog-close> Cancel </button>
+  <button mat-raised-button mat-dialog-close> {{'LoansAccountAdd.Cancel'| translate}} </button>
   <button mat-raised-button color="primary" [mat-dialog-close]="{ data: addCollateralForm }"
     [disabled]="!addCollateralForm.valid || addCollateralForm.pristine">{{ layout.addButtonText }}</button>
 </mat-dialog-actions>

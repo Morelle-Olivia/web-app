@@ -43,6 +43,43 @@
     "Dashboard": "Dashboard",
     "Welcome": "Welcome",
     "Activity": "Search Activity"
+  },
+  "CreateLoansAccount": {
+    "Details": "DETAILS",
+    "Terms": "TERMS",
+    "Charge": "CHARGES",
+    "Preview": "PREVIEW"
+  },
+  "LoanAccountLoad": {
+    "Load": "Load Loan Document",
+    "Name1": "File Name",
+    "Name2": "File Name is",
+    "Required": "required",
+    "Desc": "Description",
+    "Cancel": "Cancel",
+    "Confirm": "Confirm"
+  },
+  "LoansAccountAdd": {
+    "Loan": "Add Loan Collateral",
+    "Type1": "Collateral Type",
+    "Type2": "Collateral Type is",
+    "Required": "required",
+    "Value": "Value",
+    "Value1": "Value is",
+    "Desc": "Description",
+    "Desc1": "Description is",
+    "Cancel": "Cancel"
+  },
+  "LoansAccountView": {
+    "Detail": "Guarantor Detail",
+    "FirstN": "First Name",
+    "LastN": "Last Name",
+    "Relationship": "Relationship",
+    "Type": "Guarantor Type",
+    "Status": "Status",
+    "Active": "Active",
+    "Delete": "Deleted",
+    "Cancel": "Cancel"
   }
 }
 
