@@ -80,7 +80,41 @@
     "Active": "Active",
     "Delete": "Supprimé",
     "Cancel": "Annuler"
-  }
+  },
+  "LoansAccountC": {
+    "Charge": "Charge",
+    "Add": "Add",
+    "Name": "Name",
+    "Type": "Type",
+    "Amount": "Amount",
+    "Collect": "Collected On",
+    "Date": "Date",
+    "Action": "Actions",
+    "Charge1": "Overdue Charges",
+    "Data": "Collaterals Data",
+    "Value": "Value",
+    "Desc": "Description",
+    "Previous": "Previous",
+    "Next": "Next"
+  },
+  "LoansAccountD": {
+    "Name":"Product Name",
+    "Product": "Product Name is",
+    "Required": "required",
+    "Officer": "Loan officer",
+    "Purpose": "Loan purpose",
+    "Fund": "Fund",
+    "Submit": "Submitted on",
+    "Submit1": "Submitted on is",
+    "Disburse": "Disbursement on",
+    "Disburse1": "Disbursement on is",
+    "Id": "External id",
+    "Linkage": "Savings Linkage",
+    "Link": "Link savings",
+    "Create": "Create standing instructions at disbursement",
+    "Previous": "Previous",
+    "Next": "Next"
+    }
 
 }
 
