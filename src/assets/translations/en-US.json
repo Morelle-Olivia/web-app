@@ -157,7 +157,48 @@
       "Previous": "Previous",
       "Cancel": "Cancel",
       "Submit1": "Submit"
-    }
+    },
+    "LoansAccountT": {
+      "Principal1": "Principal is",
+      "Option": "Term Options",
+      "Required": "required",
+      "Term1": "Loan term is",
+      "Frequency": "Frequency",
+      "Frequency1": "Frequency is",
+      "Repayment1": "Number of repayments is",
+      "First": "First repayment on",
+      "Repay1": "Repaid every is",
+      "Select": "Select On",
+      "Select1": "Select Day",
+      "Amortization1": "Amortization Type is",
+      "Float": "Is Floating Rate",
+      "Calculate": "Interest Calculations",
+      "Repayment2": "Repayment Strategy is",
+      "Amount": "Installment Amount",
+      "Loan": "Loan closed with Topup",
+      "Frequency2": "Frequency Date for recalculation",
+      "Frequency3": "Frequency Data for recalculation is",
+      "Interest": "Recalculate Interest",
+      "Day": "Days in year",
+      "Type": "Advance payments adjustment type",
+      "Interest1": "Interest recalculation compounding on",
+      "Frequency4": "Frequency Interval for recalculation",
+      "On": "On",
+      "On1": "On Day",
+      "Frequency5": "Frequency for compounding",
+      "Frequency6": "Frequency Interval for compounding"
+    },
+  "AccountDetails": {
+    "Repayment": "Repayments",
+    "Equal": "Equal Amortization",
+    "Interest": "Interest",
+    "Grace": "Grace",
+    "Per": "Per annum",
+    "Grace1": "Grace on Arrears Ageing",
+    "Fund": "Fund Source",
+    "Allow": "Allow Partial Interest Calculation with same as repayment",
+    "Interest1": "Interest Type"
+  }
 }
 
 

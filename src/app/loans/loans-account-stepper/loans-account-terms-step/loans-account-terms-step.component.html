@@ -3,64 +3,64 @@
     <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
       <mat-form-field fxFlex="48%">
-        <mat-label>Principal {{loansAccountProductTemplate?.currency.displaySymbol}}</mat-label>
+        <mat-label>{{'LoansAccountP.Principal'| translate}} {{loansAccountProductTemplate?.currency.displaySymbol}}</mat-label>
         <input type="number" matInput formControlName="principal">
         <mat-error *ngIf="loansAccountTermsForm.controls.principal.hasError('required')">
-          Principal is <strong>required</strong>
+          {{'LoansAccountT.Principal1'| translate}} <strong>{{'LoansAccountT.Required'| translate}}</strong>
         </mat-error>
       </mat-form-field>
 
-      <h4 fxFlex="98%" class="mat-h4">Term Options</h4>
+      <h4 fxFlex="98%" class="mat-h4">{{'LoansAccountT.Option'| translate}}</h4>
 
       <mat-form-field fxFlex="48%">
-        <mat-label>Loan Term</mat-label>
+        <mat-label>{{'LoansAccountP.Term1'| translate}}</mat-label>
         <input matInput required formControlName="loanTermFrequency">
         <mat-error *ngIf="loansAccountTermsForm.controls.loanTermFrequency.hasError('required')">
-          Loan Term is <strong>required</strong>
+          {{'LoansAccountT.Term1'| translate}} <strong>{{'LoansAccountT.Required'| translate}}</strong>
         </mat-error>
       </mat-form-field>
 
       <mat-form-field fxFlex="48%">
-        <mat-label>Frequency</mat-label>
+        <mat-label>{{'LoansAccountT.Frequency'| translate}}</mat-label>
         <mat-select required formControlName="loanTermFrequencyType">
           <mat-option *ngFor="let type of termFrequencyTypeData" [value]="type.id">
             {{ type.value }}
           </mat-option>
         </mat-select>
         <mat-error *ngIf="loansAccountTermsForm.controls.loanTermFrequencyType.hasError('required')">
-          Frequency is <strong>required</strong>
+          {{'LoansAccountT.Frequency1'| translate}} <strong>{{'LoansAccountT.Required'| translate}}</strong>
         </mat-error>
       </mat-form-field>
 
       <mat-form-field fxFlex="48%">
-        <mat-label>Number of repayments</mat-label>
+        <mat-label>{{'LoansAccountP.Repayment'| translate}}</mat-label>
         <input type="number" matInput formControlName="numberOfRepayments">
         <mat-error *ngIf="loansAccountTermsForm.controls.numberOfRepayments.hasError('required')">
-          Number of repayments is <strong>required</strong>
+          {{'LoansAccountT.Repayment1'| translate}} <strong>{{'LoansAccountT.Required'| translate}}</strong>
         </mat-error>
       </mat-form-field>
 
       <mat-form-field fxFlex="48%">
-        <mat-label>First repayment on</mat-label>
+        <mat-label>{{'LoansAccountT.First'| translate}}</mat-label>
         <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="repaymentsPicker"
           formControlName="repaymentsStartingFromDate">
         <mat-datepicker-toggle matSuffix [for]="repaymentsPicker"></mat-datepicker-toggle>
         <mat-datepicker #repaymentsPicker></mat-datepicker>
       </mat-form-field>
 
-      <h4 fxFlex="98%" class="mat-h4">Repaid Every</h4>
+      <h4 fxFlex="98%" class="mat-h4">{{'LoansAccountP.Repay'| translate}}</h4>
 
       <mat-form-field fxFlex="48%">
-        <mat-label>Repaid every</mat-label>
+        <mat-label>{{'LoansAccountP.Repay'| translate}}</mat-label>
         <input matInput required formControlName="repaymentEvery"
           [disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.repaymentEvery">
         <mat-error *ngIf="loansAccountTermsForm.controls.repaymentEvery.hasError('required')">
-          Repaid every is <strong>required</strong>
+          {{'LoansAccountT.Repay1'| translate}} <strong>required</strong>
         </mat-error>
       </mat-form-field>
 
       <mat-form-field fxFlex="48%">
-        <mat-label>Frequency</mat-label>
+        <mat-label>{{'LoansAccountT.Frequency'| translate}}</mat-label>
         <mat-select formControlName="repaymentFrequencyType" required
           [disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.repaymentEvery">
           <mat-option *ngFor="let repaymentFrequencyType of termFrequencyTypeData"
@@ -71,7 +71,7 @@
       </mat-form-field>
 
       <mat-form-field fxFlex="48%" *ngIf="loansAccountTermsForm.controls.repaymentFrequencyType.value == 2">
-        <mat-label>Select On</mat-label>
+        <mat-label>{{'LoansAccountT.Select'| translate}}</mat-label>
         <mat-select formControlName="repaymentFrequencyNthDayType" required>
           <mat-option
             *ngFor="let repaymentFrequencyNthDayType of repaymentFrequencyNthDayTypeData"
@@ -82,7 +82,7 @@
       </mat-form-field>
 
       <mat-form-field fxFlex="48%" *ngIf="loansAccountTermsForm.controls.repaymentFrequencyType.value == 2">
-        <mat-label>Select Day</mat-label>
+        <mat-label>{{'LoansAccountT.Select1'| translate}}</mat-label>
         <mat-select formControlName="repaymentFrequencyDayOfWeekType" required>
           <mat-option
             *ngFor="let repaymentFrequencyDayOfWeekType of repaymentFrequencyDaysOfWeekTypeData"
@@ -93,7 +93,7 @@
       </mat-form-field>
 
       <mat-form-field fxFlex="48%">
-        <mat-label>Interest charged from</mat-label>
+        <mat-label>{{'LoansAccountP.Interest'| translate}}</mat-label>
         <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="interestPicker"
           formControlName="interestChargedFromDate">
         <mat-datepicker-toggle matSuffix [for]="interestPicker"></mat-datepicker-toggle>
@@ -103,12 +103,12 @@
     <ng-container *ngIf="!loansAccountProductTemplate?.isLoanProductLinkedToFloatingRate">
 
       <mat-form-field fxFlex="48%">
-        <mat-label>Nominal interest rate</mat-label>
+        <mat-label>{{'LoansAccountP.Nominal'| translate}}</mat-label>
         <input type="number" matInput formControlName="interestRatePerPeriod">
       </mat-form-field>
 
         <mat-form-field fxFlex="48%">
-          <mat-label>Interest method</mat-label>
+          <mat-label>{{'LoansAccountP.Method'| translate}}</mat-label>
           <mat-select [disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.interestType"
             formControlName="interestType">
             <mat-option *ngFor="let interestType of interestTypeData"
@@ -120,7 +120,7 @@
 
         <mat-checkbox fxFlex="48%" formControlName="isEqualAmortization"
           [checked]="loansAccountProductTemplate?.isEqualAmortization">
-          <p>Is Equal Amortization</p>
+          <p>{{'LoansAccountP.Equal'| translate}}</p>
         </mat-checkbox>
 
     </ng-container>
@@ -135,7 +135,7 @@
       <div fxFlex="48%" fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
         <mat-form-field fxFlex="48%">
-          <mat-label>Interest Method</mat-label>
+          <mat-label>{{'LoansAccountP.Method'| translate}}</mat-label>
           <mat-select formControlName="interestType">
             <mat-option [disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.interestType"
               *ngFor="let interestType of interestTypeData" [value]="interestType.id">
@@ -145,7 +145,7 @@
         </mat-form-field>
 
         <mat-checkbox fxFlex="48%" formControlName="isFloatingInterestRate">
-          <p>Is Floating Rate?</p>
+          <p>{{'LoansAccountT.Float'| translate}}?</p>
         </mat-checkbox>
 
       </div>
@@ -153,7 +153,7 @@
     </ng-container>
 
     <mat-form-field fxFlex="48%">
-      <mat-label>Amortization</mat-label>
+      <mat-label>{{'LoansAccountP.Amortization'| translate}}</mat-label>
       <mat-select required [disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.amortizationType"
         formControlName="amortizationType">
         <mat-option *ngFor="let amortizationType of amortizationTypeData"
@@ -162,14 +162,14 @@
         </mat-option>
       </mat-select>
       <mat-error *ngIf="loansAccountTermsForm.controls.amortizationType.hasError('required')">
-        Amortization Type is <strong>required</strong>
+        {{'LoansAccountT.Amortization1'| translate}} <strong>{{'LoansAccountT.Required'| translate}}</strong>
       </mat-error>
     </mat-form-field>
 
-    <h4 fxFlex="98%" class="mat-h4">Interest Calculations</h4>
+    <h4 fxFlex="98%" class="mat-h4">{{'LoansAccountT.Calculate'| translate}}</h4>
 
     <mat-form-field fxFlex="48%">
-      <mat-label>Interest calculation period</mat-label>
+      <mat-label>{{'LoansAccountP.Calculate'| translate}}</mat-label>
       <mat-select
         [disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.interestCalculationPeriodType"
         formControlName="interestCalculationPeriodType">
@@ -184,23 +184,23 @@
     <!-- <mat-checkbox *ngIf="interestCalculationPeriodType != 0" fxFlex="48%" -->
     <mat-checkbox fxFlex="48%" formControlName="allowPartialPeriodInterestCalcualtion"
       [disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.interestCalculationPeriodType">
-      <p>Calculate interest for exact days in partial period</p>
+      <p>{{'LoansAccountP.Calculate1'| translate}}</p>
     </mat-checkbox>
 
     <mat-form-field fxFlex="48%">
-      <mat-label>Arrears tolerance {{loansAccountProductTemplate?.currency.displaySymbol}}</mat-label>
+      <mat-label>{{'LoansAccountP.Arrear'| translate}} {{loansAccountProductTemplate?.currency.displaySymbol}}</mat-label>
       <input matInput type="number"
         [attr.disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.inArrearsTolerance"
         formControlName="inArrearsTolerance">
     </mat-form-field>
 
     <mat-form-field fxFlex="48%">
-      <mat-label>Interest free period</mat-label>
+      <mat-label>{{'LoansAccountP.Free'| translate}}</mat-label>
       <input matInput formControlName="graceOnInterestCharged">
     </mat-form-field>
 
     <mat-form-field fxFlex="48%">
-      <mat-label>Repayment strategy</mat-label>
+      <mat-label>{{'LoansAccountP.Repayment2'| translate}}</mat-label>
       <mat-select required
         [disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.transactionProcessingStrategyId"
         formControlName="transactionProcessingStrategyId">
@@ -211,40 +211,40 @@
         </mat-option>
       </mat-select>
       <mat-error *ngIf="loansAccountTermsForm.controls.transactionProcessingStrategyId.hasError('required')">
-        Repayment Strategy is <strong>required</strong>
+        {{'LoansAccountT.Repayment2'| translate}} <strong>required</strong>
       </mat-error>
     </mat-form-field>
 
-    <h4 fxFlex="98%" class="mat-h4">Moratorium</h4>
+    <h4 fxFlex="98%" class="mat-h4">{{'LoansAccountP.Moratorium'| translate}}</h4>
 
     <mat-checkbox fxFlex="23%" labelPosition="before" formControlName="graceOnPrincipalPayment" class="margin-v"
     [disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.graceOnPrincipalAndInterestPayment">
-      On Principal Payment
+    {{'LoansAccountP.Principal1'| translate}}
     </mat-checkbox>
 
     <mat-checkbox fxFlex="23%" labelPosition="before" formControlName="graceOnInterestPayment" class="margin-v"
     [disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.graceOnPrincipalAndInterestPayment">
-      On Interest Payment
+    {{'LoansAccountP.Interest1'| translate}}
     </mat-checkbox>
 
     <mat-checkbox fxFlex="23%" labelPosition="before" formControlName="graceOnArrearsAgeing" class="margin-v"
     [disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.graceOnArrearsAgeing">
-      On Arreas Aging
+    {{'LoansAccountP.Arrear1'| translate}}
     </mat-checkbox>
 
     <mat-form-field fxFlex="48%" *ngIf="loansAccountProductTemplate?.canDefineInstallmentAmount">
-      <mat-label>Installment Amount</mat-label>
+      <mat-label>{{'LoansAccountP.Amount'| translate}}</mat-label>
       <input type="number" matInput formControlName="fixedEmiAmount">
     </mat-form-field>
 
     <ng-container *ngIf="loansAccountProductTemplate?.canUseForTopup">
 
       <mat-checkbox fxFlex="48%" formControlName="isTopup">
-        <p>Is Topup Loan?</p>
+        <p>{{'LoansAccountP.Loan'| translate}}?</p>
       </mat-checkbox>
 
       <mat-form-field fxFlex="48%" *ngIf="loansAccountTermsForm.controls.isTopup.value">
-        <mat-label>Loan closed with Topup</mat-label>
+        <mat-label>{{'LoansAccountT.Loan'| translate}}</mat-label>
         <mat-select formControlName="loanIdToClose">
           <mat-option *ngFor="let clientActiveLoan of clientActiveLoanData"
             [value]="clientActiveLoan.id">
@@ -255,13 +255,13 @@
 
       <mat-form-field fxFlex="48%"
         *ngIf="loansAccountProductTemplate.isInterestRecalculationEnabled && loansAccountProductTemplate.interestRecalculationData.interestRecalculationCompoundingType.id != 0 && loansAccountProductTemplate.interestRecalculationData.recalculationCompoundingFrequencyType.id != 1">
-        <mat-label>Frequency Date for recalculation</mat-label>
+        <mat-label>{{'LoansAccountT.Frequency2'| translate}}</mat-label>
         <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="recalculationCompoundingFrequencyDatePicker"
           formControlName="recalculationCompoundingFrequencyDate">
         <mat-datepicker-toggle matSuffix [for]="recalculationCompoundingFrequencyDatePicker"></mat-datepicker-toggle>
         <mat-datepicker #recalculationCompoundingFrequencyDatePicker></mat-datepicker>
         <mat-error *ngIf="loansAccountTermsForm.controls.recalculationCompoundingFrequencyDate.hasError('required')">
-          Frequency Data for recalculation is <strong>required</strong>
+          {{'LoansAccountT.Frequency3'| translate}} <strong>{{'LoansAccountT.Required'| translate}}</strong>
         </mat-error>
       </mat-form-field>
 
@@ -270,24 +270,24 @@
     <mat-divider fxFlex="98%"></mat-divider>
 
     <div fxFlexFill>
-      <span fxFlex="40%">Recalculate Interest</span>
+      <span fxFlex="40%">{{'LoansAccountT.Interest'| translate}}</span>
       <span fxFlex="60%">{{ loansAccountProductTemplate?.isInterestRecalculationEnabled? 'Yes' : 'No' }}</span>
     </div>
 
     <div fxFlexFill *ngIf="loansAccountProductTemplate?.isInterestRecalculationEnabled">
-      <span fxFlex="40%">Days in year</span>
+      <span fxFlex="40%">{{'LoansAccountT.Day'| translate}}</span>
       <span fxFlex="60%">{{ loansAccountProductTemplate?.daysInYearType.value}}</span>
     </div>
 
     <ng-container *ngIf="loansAccountProductTemplate?.isInterestRecalculationEnabled">
 
       <div fxFlexFill *ngIf="loansAccountProductTemplate?.isInterestRecalculationEnabled">
-        <span fxFlex="40%">Advance payments adjustment type</span>
+        <span fxFlex="40%">{{'LoansAccountT.Type'| translate}}</span>
         <span fxFlex="60%">{{ loansAccountProductTemplate?.interestRecalculationData.rescheduleStrategyType.value }}</span>
       </div>
 
       <div fxFlexFill *ngIf="loansAccountProductTemplate?.isInterestRecalculationEnabled">
-        <span fxFlex="40%">Days in month</span>
+        <span fxFlex="40%">{{'LoansAccountP.Month'| translate}}</span>
         <span fxFlex="60%">{{ loansAccountProductTemplate?.daysInMonthType.value }}</span>
       </div>
 
@@ -296,23 +296,23 @@
     <ng-container *ngIf="loansAccountProductTemplate?.isInterestRecalculationEnabled">
 
       <div fxFlexFill>
-        <span fxFlex="40%">Interest recalculation compounding on</span>
+        <span fxFlex="40%">{{'LoansAccountT.Interest1'| translate}}</span>
         <span fxFlex="60%">{{ loansAccountProductTemplate?.interestRecalculationData.interestRecalculationCompoundingType.value }}</span>
       </div>
 
       <div fxFlexFill>
-        <span fxFlex="40%">Frequency Interval for recalculation</span>
+        <span fxFlex="40%">{{'LoansAccountT.Frequency4'| translate}}</span>
         <span fxFlex="60%">
           <span>{{ loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyType.value}}</span>
           <span *ngIf="loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyType.id == 3 &&
                 loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyWeekday != null">
-            on {{ loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyWeekday.value}}</span>
+                {{'LoansAccountT.On'| translate}} {{ loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyWeekday.value}}</span>
           <span *ngIf="loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyType.id == 4 &&
-                loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyOnDay != null">on day
+                loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyOnDay != null">{{'LoansAccountT.On1'| translate}}
             {{ loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyOnDay}}</span>
           <span *ngIf="loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyType.id == 4 &&
                 loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyOnDay == null &&
-                loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyNthDay != null">on
+                loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyNthDay != null">{{'LoansAccountT.On'| translate}}
             {{ loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyNthDay.value}}
             {{ loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyWeekday.value}}</span>
         </span>
@@ -321,7 +321,7 @@
     </ng-container>
 
     <div fxFlexFill *ngIf="loansAccountProductTemplate?.isInterestRecalculationEnabled && loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyType.id != 1">
-      <span fxFlex="40%">Frequency Interval for recalculation</span>
+      <span fxFlex="40%">{{'LoansAccountT.Frequency4'| translate}}</span>
       <span fxFlex="60%">{{ loansAccountProductTemplate?.interestRecalculationData.recalculationRestFrequencyInterval}}</span>
     </div>
 
@@ -329,19 +329,19 @@
       *ngIf="loansAccountProductTemplate?.isInterestRecalculationEnabled  && loansAccountProductTemplate?.interestRecalculationData.interestRecalculationCompoundingType.id != 0">
 
       <div fxFlexFill>
-        <span fxFlex="40%">Frequency for compounding</span>
+        <span fxFlex="40%">{{'LoansAccountT.Frequency5'| translate}}</span>
         <span fxFlex="60%">{{ loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyType.value}}
           <span *ngIf="loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyType.id == 3 &&
             loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyWeekday != null">
-            on {{ loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyWeekday.value}}
+            {{'LoansAccountT.On'| translate}} {{ loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyWeekday.value}}
           </span>
           <span *ngIf="loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyType.id == 4 &&
-            loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyOnDay != null">on day
+            loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyOnDay != null">{{'LoansAccountT.On1'| translate}}
             {{ loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyOnDay}}
           </span>
           <span *ngIf="loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyType.id == 4 &&
             loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyOnDay == null &&
-            loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyNthDay != null">on
+            loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyNthDay != null">{{'LoansAccountT.On'| translate}}
             {{ loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyNthDay.value}}
             {{ loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyWeekday.value}}
           </span>
@@ -351,7 +351,7 @@
     </ng-container>
 
     <div fxFlexFill *ngIf="loansAccountProductTemplate?.isInterestRecalculationEnabled && loansAccountProductTemplate?.interestRecalculationData.interestRecalculationCompoundingType.id != 0 && loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyType.id != 1">
-      <span fxFlex="40%">Frequency Interval for compounding</span>
+      <span fxFlex="40%">{{'LoansAccountT.Frequency6'| translate}}</span>
       <span fxFlex="60%">{{ loansAccountProductTemplate?.interestRecalculationData.recalculationCompoundingFrequencyInterval}}</span>
     </div>
 
@@ -359,10 +359,10 @@
     <div fxLayout="row" class="margin-t" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="2%">
       <button mat-raised-button matStepperPrevious>
         <fa-icon icon="arrow-left"></fa-icon>&nbsp;&nbsp;
-        Previous
+        {{'LoansAccountP.Previous'| translate}}
       </button>
       <button mat-raised-button matStepperNext>
-        Next&nbsp;&nbsp;
+        {{'LoansAccountD.Next'| translate}}&nbsp;&nbsp;
         <fa-icon icon="arrow-right"></fa-icon>
       </button>
     </div>
