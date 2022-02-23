@@ -3,50 +3,50 @@
     <table mat-table [dataSource]="dataSource" matSort>
 
       <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'ChargesTab.Name'| translate}} </th>
         <td mat-cell *matCellDef="let charge"> {{ charge.name }} </td>
       </ng-container>
 
       <ng-container matColumnDef="feepenalty">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Fee/Penalty </th>
-        <td mat-cell *matCellDef="let charge"> 
-          <span *ngIf="charge.penalty">Penalty</span>  
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'ChargesTab.Fee'| translate}} </th>
+        <td mat-cell *matCellDef="let charge">
+          <span *ngIf="charge.penalty">Penalty</span>
           <span *ngIf="!charge.penalty">Fee</span>
         </td>
       </ng-container>
 
       <ng-container matColumnDef="paymentdueat">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Payment due at </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'ChargesTab.Payment'| translate}} </th>
         <td mat-cell *matCellDef="let charge"> {{ charge.chargeTimeType.value }} </td>
       </ng-container>
 
       <ng-container matColumnDef="dueasof">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Due as of </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'ChargesTab.Due'| translate}} </th>
         <td mat-cell *matCellDef="let charge"> {{ charge.dueDate| date }} </td>
       </ng-container>
 
       <ng-container matColumnDef="calculationtype">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Calculation Type </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'ChargesTab.Type'| translate}} </th>
         <td mat-cell *matCellDef="let charge"> {{ charge.chargeCalculationType.value }} </td>
       </ng-container>
 
       <ng-container matColumnDef="due">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Due </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'ChargesTab.Due1'| translate}} </th>
         <td mat-cell *matCellDef="let charge"> {{ charge.currency.displaySymbol }}{{ charge.amount| number }} </td>
       </ng-container>
 
       <ng-container matColumnDef="paid">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Paid </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'ChargesTab.Paid'| translate}} </th>
         <td mat-cell *matCellDef="let charge"> {{ charge.currency.displaySymbol }}{{ charge.amountPaid| number }} </td>
       </ng-container>
 
       <ng-container matColumnDef="waived">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Waived </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'ChargesTab.Waive'| translate}} </th>
         <td mat-cell *matCellDef="let charge"> {{ charge.currency.displaySymbol }}{{ charge.amountWaived| number }} </td>
       </ng-container>
 
       <ng-container matColumnDef="outstanding">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Outstanding </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'ChargesTab.Outstand'| translate}} </th>
         <td mat-cell *matCellDef="let charge"> {{ charge.currency.displaySymbol }}{{ charge.amountOutstanding| number }} </td>
       </ng-container>
 

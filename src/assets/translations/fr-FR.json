@@ -210,6 +210,27 @@
     "Frequency": "Fréquence de recalcul du capital impayé",
     "Variable": "Versements variables autorisés",
     "Gap": "Écart entre les versements : (Min"
+  },
+  "ChargesTab": {
+    "Name": "Name",
+    "Fee": "Fee/Penalty",
+    "Payment": "Payment due at",
+    "Due": "Due as of",
+    "Type": "Calculation Type",
+    "Due1": "Due",
+    "Paid": "Paid",
+    "Waive": "Waived",
+    "Outstand": "Outstanding"
+  },
+  "MultiRow": {
+    "Add": "Add",
+    "Delete": "Delete All",
+    "Edit": "Edit",
+    "Delete1": "Delete"
+  },
+  "FloatingInterest": {
+    "Date": "From Date",
+    "Rate": "Interest Rate"
   }
 
 }
