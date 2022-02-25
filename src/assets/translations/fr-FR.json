@@ -231,6 +231,26 @@
   "FloatingInterest": {
     "Date": "From Date",
     "Rate": "Interest Rate"
+  },
+  "GeneralTab": {
+    "History": "Performance History",
+    "Repayment": "of Repayments",
+    "Mature": "Maturity Date",
+    "Loan": "Loan Summary",
+    "Original": "Original",
+    "Write": "Written Off",
+    "Due": "Over Due",
+    "Detail": "Loan Details",
+    "Key": "Key",
+    "Value": "Value",
+    "Available": "Not Available",
+    "Unassigned": "Unassigned",
+    "Purpose": "Loan Purpose",
+    "Provided": "Not Provided",
+    "Amount": "Proposed Amount",
+    "Approved": "Approved Amount",
+    "Disburse": "Disburse Amount",
+    "Arrear": "Arrears By"
   }
 
 }

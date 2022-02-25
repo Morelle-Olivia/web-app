@@ -251,6 +251,37 @@
     "Approved": "Approved Amount",
     "Disburse": "Disburse Amount",
     "Arrear": "Arrears By"
+  },
+  "LoansAccountActions": {
+    "Type": "Collateral Type",
+    "Required": "required",
+    "Value": "Value",
+    "Value1": "Value is",
+    "Desc": "Description",
+    "Cancel": "Cancel",
+    "Submit": "Submit",
+    "Charge": "Charge",
+    "Charge1": "Charge is",
+    "Amount": "Amount",
+    "Amount1": "Amount is",
+    "Calculate": "Charge Calculation",
+    "Time": "Charge Time",
+    "Due": "Due On",
+    "Due1": "Due Date is",
+    "Approved": "Approved On",
+    "Required1": "is required",
+    "Date": "Approved Date",
+    "Disburse": "Expected disbursement on",
+    "Transaction": "Transaction Amount",
+    "Transaction1": "Transaction Amount is",
+    "Note": "Note",
+
+    "Loan": "To Loan Officer",
+    "Officer": "Loan Officer is",
+    "Assign": "Assignment Date",
+
+    "Close": "Closed Date",
+    "Close": "Closed On"
   }
 }
 

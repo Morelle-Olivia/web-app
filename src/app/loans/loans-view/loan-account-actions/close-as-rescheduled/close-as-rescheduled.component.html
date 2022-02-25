@@ -9,13 +9,13 @@
         <div fxLayout="column">
 
           <mat-form-field>
-            <mat-label>Closed On</mat-label>
+            <mat-label>{{'LoansAccountActions.Required1'| translate}}</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="closedDatePicker" required
               formControlName="transactionDate">
             <mat-datepicker-toggle matSuffix [for]="closedDatePicker"></mat-datepicker-toggle>
             <mat-datepicker #closedDatePicker></mat-datepicker>
             <mat-error *ngIf="closeLoanForm.controls.transactionDate.hasError('required')">
-              Closed Date <strong>is required</strong>
+              {{'LoansAccountActions.Close'| translate}} <strong>{{'LoansAccountActions.Required1'| translate}}</strong>
             </mat-error>
           </mat-form-field>
 

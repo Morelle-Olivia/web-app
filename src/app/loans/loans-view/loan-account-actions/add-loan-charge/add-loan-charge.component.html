@@ -8,52 +8,52 @@
 
         <div fxLayout="column">
           <mat-form-field>
-            <mat-label>Charge</mat-label>
+            <mat-label>{{'LoansAccountActions.Charge'| translate}}</mat-label>
             <mat-select required formControlName="chargeId">
               <mat-option *ngFor="let loanCharge of loanChargeOptions" [value]="loanCharge.id">
                 {{ loanCharge.name + ' (' + loanCharge?.currency.name + ')' }}
               </mat-option>
             </mat-select>
             <mat-error *ngIf="loanChargeForm.controls.chargeId.hasError('required')">
-              Charge is <strong>required</strong>
+              {{'LoansAccountActions.Charge1'| translate}} <strong>{{'LoansAccountActions.Required'| translate}}</strong>
             </mat-error>
           </mat-form-field>
 
           <mat-form-field>
-            <mat-label>Amount</mat-label>
+            <mat-label>{{'LoansAccountActions.Amount'| translate}}</mat-label>
             <input type=number required matInput formControlName="amount" />
             <mat-error *ngIf="loanChargeForm.controls.amount.hasError('required')">
-              Amount is <strong>required</strong>
+              {{'LoansAccountActions.Amount1'| translate}} <strong>{{'LoansAccountActions.Required'| translate}}</strong>
             </mat-error>
           </mat-form-field>
 
           <mat-form-field>
-            <mat-label>Charge Calculation</mat-label>
+            <mat-label>{{'LoansAccountActions.Calculate'| translate}}</mat-label>
             <input matInput formControlName="chargeCalculation" />
           </mat-form-field>
 
           <mat-form-field>
-            <mat-label>Charge Time</mat-label>
+            <mat-label>{{'LoansAccountActions.Time'| translate}}</mat-label>
             <input matInput formControlName="chargeTime" />
           </mat-form-field>
 
           <mat-form-field *ngIf="loanChargeForm.controls['dueDate']">
-            <mat-label>Due On</mat-label>
+            <mat-label>{{'LoansAccountActions.Due'| translate}}</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="dueDatePicker" required
               formControlName="dueDate">
             <mat-datepicker-toggle matSuffix [for]="dueDatePicker"></mat-datepicker-toggle>
             <mat-datepicker #dueDatePicker></mat-datepicker>
             <mat-error *ngIf="loanChargeForm.controls.dueDate.hasError('required')">
-              Due Date is <strong>required</strong>
+              {{'LoansAccountActions.Due1'| translate}} <strong>{{'LoansAccountActions.Required'| translate}}</strong>
             </mat-error>
           </mat-form-field>
 
         </div>
 
         <mat-card-actions fxLayoutGap="5px" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
-          <button type="button" mat-raised-button [routerLink]="['../../general']">Cancel</button>
+          <button type="button" mat-raised-button [routerLink]="['../../general']">{{'LoansAccountActions.Cancel'| translate}}</button>
           <button mat-raised-button color="primary" [disabled]="!loanChargeForm.valid"
-            *mifosxHasPermission="'CREATE_LOANCHARGE'">Submit</button>
+            *mifosxHasPermission="'CREATE_LOANCHARGE'">{{'LoansAccountActions.Submit'| translate}}</button>
         </mat-card-actions>
 
       </mat-card-content>
